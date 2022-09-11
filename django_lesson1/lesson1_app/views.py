@@ -55,7 +55,7 @@ def autumnVIEW(request):
     html = f"""
     <h1>About Autumn</h1>
     <p>autumn, season of the year between summer and winter during which temperatures gradually decrease. It is often called fall in the United States because leaves fall from the trees at that time. Autumn is usually defined in the Northern Hemisphere as the period between the autumnal equinox (day and night equal in length), September 22 or 23, and the winter solstice (year’s shortest day), December 21 or 22; and in the Southern Hemisphere as the period between March 20 or 21 and June 21 or 22. The autumn temperature transition between summer heat and winter cold occurs only in middle and high latitudes; in equatorial regions, temperatures generally vary little during the year. In the polar regi</p>
-    <a href='../'>back</a>
+    <a href='../'>back</a
     <img src="https://media.istockphoto.com/photos/falling-autumn-leaves-before-sunset-picture-id1176602671?k=20&m=1176602671&s=612x612&w=0&h=u88s3JdcrTO4y4A779WhJpX0QT9q7rNFTx5ha_fzCOs=" alt='bu yerda rasm bor'>
     """
     return HttpResponse(html)
