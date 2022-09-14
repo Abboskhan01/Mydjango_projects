@@ -4,7 +4,7 @@ from .models import Employees
 
 
 def get_employess(request):
-    queryset = Employees.objects.only('first_name ')
+    queryset = Employees.objects.only('first_name')
     print("\n", queryset.query)
     str_data = ""
     for i in queryset:
