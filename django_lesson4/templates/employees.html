@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+    <link rel="stylesheet" href="{% static 'css/stillar' %}">
+</head>
+<body >
+    <h1>Eng ko'p ish haqi oladigan xodimlar</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for xodim in EMPLOYEES_Count %}
+            <tr>
+                <td><a href="{% url 'deps-list' employee_id=xodim.employee_id%}" >{{xodim.first_name}}</a></td>
+                <td>{{ xodim.job.job_title }}</td>
+                <td>{{ xodim.salary }}</td>
+                {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

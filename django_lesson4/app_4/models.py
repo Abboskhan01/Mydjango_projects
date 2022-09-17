@@ -9,14 +9,14 @@ from django.db import models
 
 
 class Countries(models.Model):
-    country_id = models.AutoField(primary_key=True)
+    country_id = models.TextField(primary_key=True)
     country_name = models.TextField()
     region = models.ForeignKey('Regions', models.DO_NOTHING)
 
     class Meta:
         managed = False
         db_table = 'countries'
-        verbose_name_plural = 'countries'
+        verbose_name_plural = 'Countries'
 
     def __str__(self):
         return self.country_name
@@ -30,9 +30,11 @@ class Departments(models.Model):
     class Meta:
         managed = False
         db_table = 'departments'
+        verbose_name_plural = 'Departments'
 
     def __str__(self):
         return self.department_name
+
 
 class Dependents(models.Model):
     dependent_id = models.AutoField(primary_key=True)
@@ -44,9 +46,11 @@ class Dependents(models.Model):
     class Meta:
         managed = False
         db_table = 'dependents'
+        verbose_name_plural = 'Dependents'
 
     def __str__(self):
-        return f"{self.first_name}  {self.last_name}"
+        return f"{self.first_name} {self.last_name}'s {self.relationship}"
+
 
 class Employees(models.Model):
     employee_id = models.AutoField(primary_key=True)
@@ -63,9 +67,11 @@ class Employees(models.Model):
     class Meta:
         managed = False
         db_table = 'employees'
+        verbose_name_plural = 'Employees'
 
     def __str__(self):
-        return f"{self.first_name}  {self.last_name}"
+        return f"{self.first_name} {self.last_name}"
+
 
 class Jobs(models.Model):
     job_id = models.AutoField(primary_key=True)
@@ -76,9 +82,11 @@ class Jobs(models.Model):
     class Meta:
         managed = False
         db_table = 'jobs'
+        verbose_name_plural = "Jobs"
 
     def __str__(self):
         return self.job_title
+
 
 class Locations(models.Model):
     location_id = models.AutoField(primary_key=True)
@@ -91,6 +99,10 @@ class Locations(models.Model):
     class Meta:
         managed = False
         db_table = 'locations'
+        verbose_name_plural = "Locations"
+
+    def __str__(self):
+        return self.country
 
 
 class Regions(models.Model):
@@ -100,6 +112,7 @@ class Regions(models.Model):
     class Meta:
         managed = False
         db_table = 'regions'
+        verbose_name_plural = 'Regions'
 
     def __str__(self):
         return self.region_name
