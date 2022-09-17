@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <title>Title</title>
+</head>
+
+<body style="background-color:whitesmoke">
+<h1 style="background-color:darkcyan;text-align:center;margin:auto;color:#8df8bb;font-family: sans-serif;padding:20px">{{employee.first_name}} {{employee.last_name}}</h1>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Relationship</th>
+
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for d in deps %}
+        <tr>
+            <td>{{d.first_name}}</td>
+            <td>{{d.relationship}}</td>
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+</table>
+<a href="{% url 'employee-list' top=3 %}" class="button">Ortga</a>
+</body>
+</html>
