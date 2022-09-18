@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employees</title>
+</head>
+<body>
+    <h1 style="text-align: center; color: darkred">Eng ko'p ish haqi oladigan Xodimlar ro'yhati:</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Job</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        {% for xodim in employees_list %}
+        <tbody>
+            <tr>
+                <td><a href=" {% url 'qarindosh_url' idisi=xodim.employee_id %}">{{ xodim.first_name }}</a></td>
+                <td>{{ xodim.job }}</td>
+                <td>{{ xodim.salary }}</td>
+            </tr>
+        </tbody>
+        {% endfor %}
+    </table>
+</body>
+</html>
