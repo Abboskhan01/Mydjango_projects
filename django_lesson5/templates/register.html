@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1 style="text-align: center;color: darkred">REGISTER FOR COURSES</h1>
+    <form method="post">
+        {%  csrf_token %}
+        <input type="text" name="first_name" placeholder="Firstname"><br><br>
+        <input type="text" name="last_name" placeholder="Lastname"><br><br>
+        <input type="password" name="password" placeholder="password"><br><br>
+        <input type="number" name="phone_number" placeholder="Phone number"><br><br>
+        <input type="email" name="email" placeholder="Email"><br> <br>
+        <select name="course_type" >
+            <option value="courses_type">Courses type*</option>
+            <option value="math">Math</option>
+            <option value="english">English</option>
+            <option value="IELTS">IELTS</option>
+            <option value="biology">Biology</option>
+            <option value="geography">Geography</option>
+        </select><br><br>
+        <label for="student">Student</label>
+        <input type="checkbox" id="student">
+        <button type="submit">Register</button>
+
+    </form>
+</body>
+</html>

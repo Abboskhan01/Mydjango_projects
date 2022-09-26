@@ -1,4 +1,4 @@
-"""django_lesson5 URL Configuration
+"""django_lesson7 URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -18,5 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('lesson5_app.urls'), name='lesson5_app_urls'),
+    # path('', include('blogsite_app.urls'), name='blogsite_app'),
 ]
